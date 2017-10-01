@@ -1,0 +1,641 @@
+[
+  {
+    "id": "0",
+    "title": "Other",
+    "parent_id": null,
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "10",
+    "title": "Misc",
+    "parent_id": "0",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "20",
+    "title": "Hashed",
+    "parent_id": "0",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1000",
+    "title": "Console",
+    "parent_id": null,
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "100000000"
+  },
+  {
+    "id": "1010",
+    "title": "NDS",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1020",
+    "title": "PSP",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1030",
+    "title": "Wii",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1040",
+    "title": "Xbox",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1050",
+    "title": "Xbox 360",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1060",
+    "title": "WiiWare\/VC",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1070",
+    "title": "XBOX 360 DLC",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1080",
+    "title": "PS3",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1110",
+    "title": "3DS",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1120",
+    "title": "PS Vita",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1130",
+    "title": "WiiU",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1140",
+    "title": "Xbox One",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1180",
+    "title": "PS4",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "1999",
+    "title": "Other",
+    "parent_id": "1000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "2000",
+    "title": "Movies",
+    "parent_id": null,
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "75000000"
+  },
+  {
+    "id": "2010",
+    "title": "Foreign",
+    "parent_id": "2000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "2030",
+    "title": "SD",
+    "parent_id": "2000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "2040",
+    "title": "HD",
+    "parent_id": "2000",
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "500000000"
+  },
+  {
+    "id": "2045",
+    "title": "UHD",
+    "parent_id": "2000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "2050",
+    "title": "3D",
+    "parent_id": "2000",
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "500000000"
+  },
+  {
+    "id": "2060",
+    "title": "BluRay",
+    "parent_id": "2000",
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "500000000"
+  },
+  {
+    "id": "2070",
+    "title": "DVD",
+    "parent_id": "2000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "2080",
+    "title": "WEBDL",
+    "parent_id": "2000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "2999",
+    "title": "Other",
+    "parent_id": "2000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "3000",
+    "title": "Audio",
+    "parent_id": null,
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "50000"
+  },
+  {
+    "id": "3010",
+    "title": "MP3",
+    "parent_id": "3000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "3020",
+    "title": "Video",
+    "parent_id": "3000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "3030",
+    "title": "Audiobook",
+    "parent_id": "3000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "3040",
+    "title": "Lossless",
+    "parent_id": "3000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "3060",
+    "title": "Foreign",
+    "parent_id": "3000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "3999",
+    "title": "Other",
+    "parent_id": "3000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "4000",
+    "title": "PC",
+    "parent_id": null,
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "4010",
+    "title": "0day",
+    "parent_id": "4000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "4020",
+    "title": "ISO",
+    "parent_id": "4000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "4030",
+    "title": "Mac",
+    "parent_id": "4000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "4050",
+    "title": "Games",
+    "parent_id": "4000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "4060",
+    "title": "Phone-IOS",
+    "parent_id": "4000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "4070",
+    "title": "Phone-Android",
+    "parent_id": "4000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "4999",
+    "title": "Phone-Other",
+    "parent_id": "4000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "5000",
+    "title": "TV",
+    "parent_id": null,
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "50000000"
+  },
+  {
+    "id": "5010",
+    "title": "WEB-DL",
+    "parent_id": "5000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "5020",
+    "title": "Foreign",
+    "parent_id": "5000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "5030",
+    "title": "SD",
+    "parent_id": "5000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "5040",
+    "title": "HD",
+    "parent_id": "5000",
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "50000000"
+  },
+  {
+    "id": "5045",
+    "title": "UHD",
+    "parent_id": "5000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "5060",
+    "title": "Sport",
+    "parent_id": "5000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "5070",
+    "title": "Anime",
+    "parent_id": "5000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "5080",
+    "title": "Documentary",
+    "parent_id": "5000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "5999",
+    "title": "Other",
+    "parent_id": "5000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "6000",
+    "title": "XXX",
+    "parent_id": null,
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "50000"
+  },
+  {
+    "id": "6010",
+    "title": "DVD",
+    "parent_id": "6000",
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "100000000"
+  },
+  {
+    "id": "6020",
+    "title": "WMV",
+    "parent_id": "6000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "6030",
+    "title": "XviD",
+    "parent_id": "6000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "6040",
+    "title": "x264",
+    "parent_id": "6000",
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "100000000"
+  },
+  {
+    "id": "6045",
+    "title": "UHD",
+    "parent_id": "6000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "6060",
+    "title": "Imageset",
+    "parent_id": "6000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "6070",
+    "title": "Packs",
+    "parent_id": "6000",
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "50000000"
+  },
+  {
+    "id": "6080",
+    "title": "SD",
+    "parent_id": "6000",
+    "active": "1",
+    "description": "XXX SD Releases",
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "6090",
+    "title": "WEB-DL",
+    "parent_id": "6000",
+    "active": "1",
+    "description": "XXX WEBDL Releases",
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "6999",
+    "title": "Other",
+    "parent_id": "6000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "7000",
+    "title": "Books",
+    "parent_id": null,
+    "active": "1",
+    "description": "",
+    "disable_preview": "0",
+    "min_size": "50000"
+  },
+  {
+    "id": "7010",
+    "title": "Magazines",
+    "parent_id": "7000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "7020",
+    "title": "Ebook",
+    "parent_id": "7000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "7030",
+    "title": "Comics",
+    "parent_id": "7000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "7040",
+    "title": "Technical",
+    "parent_id": "7000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "7060",
+    "title": "Foreign",
+    "parent_id": "7000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  },
+  {
+    "id": "7999",
+    "title": "Other",
+    "parent_id": "7000",
+    "active": "1",
+    "description": null,
+    "disable_preview": "0",
+    "min_size": "0"
+  }
+]
