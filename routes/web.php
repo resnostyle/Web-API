@@ -20,7 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/invites/{invite}', 'InvitesController@show');
-Route::post('/invites', 'InvitesController@store');
+Route::post('/invites', 'InvitesController@store')->name('free_invites');
+
+Route::get('/browse/{category}/{subcat?}', 'CategoryController@show')->name('browse');
 
 Route::get('/mailable', function () {
     $user = App\User::find(3);

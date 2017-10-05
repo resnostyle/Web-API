@@ -16,7 +16,7 @@ class InvitesController extends Controller {
 
         $invites = Invite::free()->get();
 
-        return view('invite.index', compact($invites));
+        return view('invite.index', compact('invites'));
     }
 
     /**
@@ -39,6 +39,6 @@ class InvitesController extends Controller {
      */
     public function show(Invite $invite)
     {
-        return view('invite.register', ['invite' => $invite]);
+        return view('invite.register', compact('invite'));
     }
 }
