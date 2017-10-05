@@ -10,6 +10,8 @@ class Category extends Model
     use HybridRelations;
     protected $guarded = [];
 
+    protected $connection = 'mysql';
+
     public function getRouteKeyName()
     {
         return 'title';

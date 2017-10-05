@@ -167,9 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravel\Cashier\CashierServiceProvider::class,
-        Eduardokum\LaravelMailAutoEmbed\Providers\LaravelMailAutoEmbedServiceProvider::class,
-        Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
+        Eduardokum\LaravelMailAutoEmbed\ServiceProvider::class,
         Jenssegers\Mongodb\MongodbServiceProvider::class,
         Zetas\L5Fixtures\FixturesServiceProvider::class,
 

@@ -8,7 +8,7 @@
         "php": ">=7.0.0",
         "eduardokum/laravel-mail-auto-embed": "^1.0",
         "fideloper/proxy": "~3.3",
-        "jenssegers/mongodb": "v3.3.0-alpha",
+        "jenssegers/mongodb": "^3.3.0-alpha",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
         "zetas/l5-fixtures": "dev-master"

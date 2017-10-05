@@ -22,7 +22,9 @@ class CategoryController extends Controller
             }
         }
 
-        return view('category.browse', compact('category'));
+        $releases = $category->releases;
+
+        return view('category.browse', compact('releases', 'category'));
     }
 
 }
