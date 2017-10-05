@@ -17,4 +17,8 @@ class Release extends Model
     public function category() {
         return $this->belongsTo(Category::class);
     }
+
+    public function groups() {
+        return $this->belongsToMany(Group::class);
+    }
 }
