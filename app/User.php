@@ -4,11 +4,10 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Cashier\Billable;
 
 class User extends Authenticatable
 {
-    use Notifiable, Billable;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -38,5 +37,13 @@ class User extends Authenticatable
 
     public function sentInvites() {
         return $this->hasMany(Invite::class);
+    }
+
+    public function getEmailAttribute($email) {
+        return decrypt($email);
+    }
+
+    public function setEmailAttribute($email) {
+        $this->attributes['email'] = encrypt($email);
     }
 }
