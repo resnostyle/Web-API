@@ -14,8 +14,10 @@ class Role extends Model {
     const ROLE_MODERATOR = 4;
     const ROLE_ADMIN = 5;
 
-    private $_elevatedRoles = [
-
+    const ROLES_ELEVATED = [
+        self::ROLE_VIP,
+        self::ROLE_MODERATOR,
+        self::ROLE_ADMIN
     ];
 
     public $timestamps = false;
@@ -27,10 +29,10 @@ class Role extends Model {
 
     public static function defaultRole()
     {
-        return static::where('is_default', true)->first();
+        return static::where('is_default', true)->firstOrFail();
     }
 
     public function isElevated() {
-        return ($this->id >= self::ROLE_VIP);
+        return in_array($this->id,self::ROLES_ELEVATED);
     }
 }
