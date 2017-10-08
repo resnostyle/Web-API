@@ -14,10 +14,12 @@ class CreateInvitesTable extends Migration
     public function up()
     {
         Schema::create('invites', function (Blueprint $table) {
-            $table->string('id')->unique();
+            $table->increments('id');
+            $table->string('guid')->unique();
             $table->string('email');
             $table->integer('user_id')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

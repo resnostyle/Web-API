@@ -16,8 +16,8 @@ use Faker\Generator as Faker;
 $factory->define(App\Invite::class, function (Faker $faker) {
 
     return [
-        'id'        => str_random(32),
+        'guid'        => str_random(32),
         'email'           => $faker->unique()->safeEmail,
-        'user_id'        => null
+        'user_id'        => App\User::inRandomOrder()->first()->id
     ];
 });
