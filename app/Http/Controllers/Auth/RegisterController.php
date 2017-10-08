@@ -69,7 +69,7 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'role_id' => ($default_role instanceof Role) ? $default_role->id : 2
+            'role_id' => $default_role->id
         ]);
     }
 }
