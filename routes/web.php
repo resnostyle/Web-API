@@ -24,6 +24,8 @@ Route::post('/invites', 'InvitesController@store')->name('free_invites');
 
 Route::get('/browse/{category}/{subcat?}', 'CategoryController@show')->name('browse');
 
+Route::resource('/user','UserController');
+
 Route::get('/mailable', function () {
     $user = App\User::find(3);
 
