@@ -20,14 +20,14 @@ class SetupLaranZEDb_DB extends Command {
      */
     protected $description = 'Run the database setup for LaranZEDb';
 
-    private $_env_db_tmpl = <<<TMP
+    private $_env_db_tmpl = <<<TMPL
 DB_CONNECTION=%%CON%%
 DB_HOST=%%HOST%%
 DB_PORT=%%PORT%%
 DB_DATABASE=%%DB%%
 DB_USERNAME=%%USER%%
 DB_PASSWORD=%%PASS%%
-TMP;
+TMPL;
 
     /**
      * Create a new command instance.
