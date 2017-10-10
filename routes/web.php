@@ -24,8 +24,11 @@ Route::post('/invites', 'InvitesController@store')->name('free_invites');
 
 Route::get('/browse/{category}/{subcat?}', 'CategoryController@show')->name('browse');
 
-Route::resource('/user','UserController');
+Route::get('/profile/{user?}','UserController@show')->name('profile');
+Route::get('/profile/edit/{user?}', 'UserController@edit');
+Route::patch('/profile/{user?}', 'UserController@store');
 
+// Test email sending.
 Route::get('/mailable', function () {
     $user = App\User::find(3);
 
