@@ -50,10 +50,10 @@
 </head>
 <body>
 <div id="container">
-    <div id="logo"><a href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}"
+    <div id="logo"><a href="{{ route('news') }}"><img src="{{ asset('images/logo.png') }}"
                                                             title="{{ config('app.name') }}" alt="{{ config('app.name') }}"/></a>
 
-        <a href="{{ route('home') }}" class="linky">Home</a>&nbsp;&nbsp;&nbsp;<a href="{{ route('login') }}" class="linky">Login</a>&nbsp;&nbsp;&nbsp;<a
+        <a href="{{ route('news') }}" class="linky">Home</a>&nbsp;&nbsp;&nbsp;<a href="{{ route('login') }}" class="linky">Login</a>&nbsp;&nbsp;&nbsp;<a
                     href="{{ route('register') }}" class="linky">Register</a>&nbsp;&nbsp;&nbsp;<a href="{{ route('password.request') }}"
                                                                                    class="linky">Recover</a>
         <br/><br/>

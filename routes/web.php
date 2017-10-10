@@ -17,16 +17,23 @@ Route::get('/', ['middleware' => 'guest', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/news', 'NewsController@index')->name('news');
 
+// -- Invites -- //
 Route::get('/invites/{invite}', 'InvitesController@show');
 Route::post('/invites', 'InvitesController@store')->name('free_invites');
+// ------------- //
 
+// -- Releases -- //
 Route::get('/browse/{category}/{subcat?}', 'CategoryController@show')->name('browse');
+// -------------- //
 
+// -- User -- //
 Route::get('/profile/{user?}','UserController@show')->name('profile');
+// Kind of a nasty hack, violates restful, but you can only have trailing optional values.
 Route::get('/profile/edit/{user?}', 'UserController@edit');
 Route::patch('/profile/{user?}', 'UserController@store');
+// ---------- //
 
 // Test email sending.
 Route::get('/mailable', function () {
