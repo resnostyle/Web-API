@@ -21,6 +21,7 @@ class CreateCategoriesTable extends Migration
             $table->string('description')->nullable();
             $table->boolean('disable_preview')->default(false);
             $table->bigInteger('min_size')->default(0);
+            $table->smallInteger('order');
         });
     }
 
