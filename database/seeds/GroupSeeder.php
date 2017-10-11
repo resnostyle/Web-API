@@ -1,9 +1,8 @@
 <?php
 
-
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class GroupSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(GroupSeeder::class);
-        $this->call(ReleaseSeeder::class);
+        factory(\App\Group::class, 100)->create();
     }
 }
