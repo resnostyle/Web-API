@@ -40,16 +40,26 @@
                     </li>
                     @endguest
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
-                           data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
+
+                    @forelse($nav_cats->sortBy('order') as $key => $cats)
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-{{$key}}"
+                               data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">{{ $key }}</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-{{$key}}">
+                                <a class="dropdown-item" href="{{ route('browse', ["category" => $key]) }}">All</a>
+                                @forelse($cats as $cat)
+                                    <a class="dropdown-item" href="{{ route('browse', ["category" => $key, "subcat" => $cat]) }}">{{$cat}}</a>
+                                @empty
+                                @endforelse
+                            </div>
+                        </li>
+                    @empty
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">No Categories Loaded</a>
+                        </li>
+                    @endforelse
+
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -59,10 +69,10 @@
 </nav>
 
 <div class="container">
-        <div class="jumbotron">
+    <div class="jumbotron">
 
-            @yield('content')
-        </div>
+        @yield('content')
+    </div>
 </div>
 
 
