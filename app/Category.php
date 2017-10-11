@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Jenssegers\Mongodb\Eloquent\HybridRelations;
 
@@ -27,5 +28,9 @@ class Category extends Model
 
     public function children() {
         return $this->hasMany(static::class, 'parent_id');
+    }
+
+    public function scopeActive(Builder $query) {
+        return $query->where('active', true);
     }
 }
