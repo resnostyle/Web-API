@@ -5,12 +5,9 @@ namespace App\Http\Controllers;
 use App\Invite;
 use Illuminate\Http\Request;
 
-class InvitesController extends Controller {
+class InvitesController extends SecureController {
 
-    public function __construct()
-    {
-        $this->middleware('auth')->only('store');
-    }
+    protected $only = ['store'];
 
     public function index() {
 
