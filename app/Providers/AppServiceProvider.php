@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
     {
         // Pull and order the categories for navbar display.
         // @TODO Gotta be a better way to do this
-        View::composer('*', function (\Illuminate\View\View $view) {
+        View::composer('*', function ($view) {
 
             // Since this entire closure is executed on every page load, caching DB calls is key.
             $all_cats = Cache::rememberForever('categories', function() {
