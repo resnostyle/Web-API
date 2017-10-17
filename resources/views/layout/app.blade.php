@@ -38,10 +38,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('profile') }}">Profile</a>
                     </li>
-                    @endguest
-
-
-                    @forelse($nav_cats->sortBy('order') as $key => $cats)
+                    @forelse($nav_cats as $key => $cats)
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown-{{$key}}"
                                data-toggle="dropdown"
@@ -59,7 +56,7 @@
                             <a class="nav-link" href="#">No Categories Loaded</a>
                         </li>
                     @endforelse
-
+                    @endguest
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">

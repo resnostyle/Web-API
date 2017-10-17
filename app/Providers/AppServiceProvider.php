@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Category;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -19,7 +20,8 @@ class AppServiceProvider extends ServiceProvider
         // Pull and order the categories for navbar display.
         // @TODO Gotta be a better way to do this
         View::composer('*', function ($view) {
-
+            if (!Auth::check())
+                return false;
             // Since this entire closure is executed on every page load, caching DB calls is key.
             $all_cats = Cache::rememberForever('categories', function() {
                 return Category::active()->get();
