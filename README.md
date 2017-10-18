@@ -56,7 +56,10 @@ root@9b5d5d2af870:/var/www# exit
 
 (if NPM exists) Spin up laravel mix to compile JS and SASS files as well as auto-refreshing the browser on file modification:
 
-`$ npm run watch`
+```
+# From local dev box, not inside workspace container:
+$ npm run watch
+```
 
 Note: You may have to install yarn for that to work.
 
