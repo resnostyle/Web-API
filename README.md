@@ -26,16 +26,11 @@ Requires:
 * Docker >= 1.12
 * Docker-compose
 * NPM (if you want to do front-end dev at all)
-* Nothing else running on port 80, 3306, 27017, or 6379 (you can change the ports in the .env.laradock file)
+* Nothing else running on port 80, 3306, 27017, or 6379 (you can change the ports in the `laradock/.env` file)
 
 Be sure to pull all sub modules:
 `git clone --recursive git://github.com/LaranZEDb/Web-Api.git`
 
-Create a symlink to the laradock environment file (should not need to be modified):
-```
-# From inside the project root dir:
-$ ln -s ../.env.laradock ./laradock/.env
-```
 
 Spin up the necessary containers (this will take awhile):
 ```
