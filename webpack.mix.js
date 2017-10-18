@@ -16,7 +16,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
     //.copyDirectory('resources/assets/images', 'public/images')
     .version()
     .browserSync({
-        'proxy': 'laranzedb.app',
+        'proxy': 'localhost',
         'notify': false
     });
 
