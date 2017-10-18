@@ -59,7 +59,7 @@ root@9b5d5d2af870:/var/www# php artisan db:seed
 root@9b5d5d2af870:/var/www# exit
 ```
 
-Spin up laravel mix to compile JS and SASS files as well as auto-refreshing the browser on file modification:
+(if NPM exists) Spin up laravel mix to compile JS and SASS files as well as auto-refreshing the browser on file modification:
 
 `$ npm run watch`
 
