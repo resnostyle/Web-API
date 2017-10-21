@@ -23,7 +23,7 @@ We use laradock for deployment and development.
 
 Requires:
 * Git
-* Docker >= 1.12
+* DockerCE >= 17
 * Docker-compose
 * NPM (if you want to do front-end dev at all)
 * Nothing else running on port 80, 3306, 27017, or 6379 (you can change the ports in the `laradock/.env` file)
