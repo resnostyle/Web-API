@@ -49,6 +49,7 @@ $ cd laradock #if not already in this folder
 $ docker-compose exec workspace bash
 root@9b5d5d2af870:/var/www# composer install
 root@9b5d5d2af870:/var/www# npm install
+root@9b5d5d2af870:/var/www# php artisan key:generate
 root@9b5d5d2af870:/var/www# php artisan migrate
 root@9b5d5d2af870:/var/www# php artisan db:seed
 root@9b5d5d2af870:/var/www# exit
