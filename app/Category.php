@@ -51,7 +51,7 @@ class Category extends Model
      *
      * Provides access to the hybrid releases 1toMany relationship.
      * 
-     * @return Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Query\Builder $query
      */
     public function releases() 
     {
@@ -64,7 +64,7 @@ class Category extends Model
      * Provides inverse access to an optional 1to1 relationship with
      * a parent Category (i.e. ->Movies<-/HD)
      * 
-     * @return Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Query\Builder $query
      */
     public function parent() 
     {
@@ -77,7 +77,7 @@ class Category extends Model
      * Provices access to an optional 1toMany relationship with
      * it's children categories (i.e. Movies/->HD<-)
      *
-     * @return Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Query\Builder $query
      */
     public function children() 
     {

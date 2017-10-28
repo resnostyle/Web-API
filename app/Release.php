@@ -38,7 +38,7 @@ class Release extends Model
      * Provides inverse access to the 1toMany relationship between Categories
      * and Releases.
      *
-     * @return Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Query\Builder $query
      */
     public function category() 
     {
@@ -51,7 +51,7 @@ class Release extends Model
      * Provides inverse access to the ManyToMany relationship between Groups
      * and Releases.
      *
-     * @return Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Query\Builder $query
      */
     public function groups() 
     {
