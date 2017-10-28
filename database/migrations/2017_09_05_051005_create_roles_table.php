@@ -13,15 +13,8 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->integer('api_requests');
-            $table->integer('download_requests');
-            $table->integer('invites')->default(0);
-            $table->boolean('is_default')->default(false);
-            $table->boolean('can_preview')->default(true);
-        });
+        Schema::dropIfExists('roles'); //removing this table entirely, just 
+                                       // keeping this migration for devs.
     }
 
     /**

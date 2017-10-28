@@ -64,12 +64,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $default_role = Role::defaultRole();
-        return User::create([
+        $user = User::create([
             'username' => $data['username'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-            'role_id' => $default_role->id
+            'password' => bcrypt($data['password'])
         ]);
+
+        $user->attachRole(Role::defaultRole());
+
+        return $user;
     }
 }

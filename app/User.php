@@ -15,6 +15,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 /**
  * User Model
@@ -29,7 +30,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  */
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, EntrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -50,25 +51,12 @@ class User extends Authenticatable
     ];
 
     /**
-     * Role relationship
-     *
-     * Provides inverse access to the 1toMany relationship betweens Users and Roles.
-     * 
-     * @example $user->role->id;
-     * @return  Builder $query
-     */
-    public function role() 
-    {
-        return $this->belongsTo(Role::class);
-    }
-
-    /**
      * Inviter relationship
      * 
      * Provides accesss to the 1to1 relationship between a user and whoever 
      * invited them (another user).
      *
-     * @return Builder $query
+     * @return \Illuminate\Database\Query\Builder $query
      */
     public function inviter() 
     {
@@ -81,7 +69,7 @@ class User extends Authenticatable
      * Provides access to the 1toMany relationship between a user and 
      * the invites they sent out.
      *
-     * @return Builder $query
+     * @return \Illuminate\Database\Query\Builder $query
      */
     public function sentInvites() 
     {

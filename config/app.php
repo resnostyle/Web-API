@@ -170,6 +170,7 @@ return [
         Eduardokum\LaravelMailAutoEmbed\ServiceProvider::class,
         Jenssegers\Mongodb\MongodbServiceProvider::class,
         Zetas\L5Fixtures\FixturesServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,8 +229,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Fixtures' => Zetas\L5Fixtures\FixturesFacade::class
-
+        'Fixtures' => Zetas\L5Fixtures\FixturesFacade::class,
+        'Entrust' => Zizaco\Entrust\EntrustFacade::class,
     ],
 
 ];

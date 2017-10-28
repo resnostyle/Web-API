@@ -10,8 +10,17 @@ class UserPolicy
 {
     use HandlesAuthorization;
 
-    private function _canModify(User $user, User $model) {
-        if ($user->id == $model->id || Gate::allows('administrate')) {
+    private function _canWrite(User $user, User $model) {
+        if (($user->id == $model->id && $user->can('edit-profile')) ||
+            $user->can('edit-other_user_profiles')) {
+            return true;
+        }
+        return false;
+    }
+
+    private function _canRead(User $user, User $model) {
+        if (($user->id == $model->id && $user->can('view-profile')) ||
+            $user->can('view-other_profiles')) {
             return true;
         }
         return false;
@@ -26,7 +35,7 @@ class UserPolicy
      */
     public function view(User $user, User $model)
     {
-        $this->_canModify($user, $model);
+        $this->_canRead($user, $model);
     }
 
     /**
@@ -37,7 +46,7 @@ class UserPolicy
      */
     public function create(User $user)
     {
-        if (blank($user) || Gate::allows('administrate')) {
+        if (blank($user) || $user->can('create-user')) {
             return true;
         }
         return false;
@@ -52,7 +61,7 @@ class UserPolicy
      */
     public function update(User $user, User $model)
     {
-        $this->_canModify($user, $model);
+        $this->_canWrite($user, $model);
     }
 
     /**
@@ -64,6 +73,6 @@ class UserPolicy
      */
     public function delete(User $user, User $model)
     {
-        $this->_canModify($user, $model);
+        $this->_canWrite($user, $model);
     }
 }
