@@ -37,13 +37,14 @@ class AclSeeder extends Seeder
             }
         }
         $memberRole = Role::defaultRole();
-        $vipRole = Role::where('name', 'VIP')->first();
+        $vipRole = Role::where('name', 'vip')->first();
+        $moderator = Role::where('name', 'moderator')->first();
         $adminRole = Role::where('name', 'admin')->first();
         $basicUser = App\User::find(2);
 
         $basicUser->attachRole($memberRole);
 
         $adminUser = App\User::find(1);
-        $adminUser->attachRoles([$memberRole, $vipRole, $adminRole]);
+        $adminUser->attachRoles([$memberRole, $vipRole, $moderator, $adminRole]);
     }
 }
