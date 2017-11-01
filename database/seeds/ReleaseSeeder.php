@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Release;
 use App\Category;
-use Zetas\L5Fixtures\FixturesFacade as Fixtures;
+use Mayconbordin\L5Fixtures\FixturesFacade as Fixtures;
 
 class ReleaseSeeder extends Seeder
 {
