@@ -14,7 +14,7 @@ class AddApikeyToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->text('apikey')->nullable();
+            $table->text('api_key');
         });
     }
 
@@ -26,7 +26,7 @@ class AddApikeyToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['apikey']);
+            $table->dropColumn(['api_key']);
         });
     }
 }
