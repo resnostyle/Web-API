@@ -13,11 +13,3 @@ use Illuminate\Foundation\Inspiring;
 |
 */
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->describe('Display an inspiring quote');
-
-Artisan::command('fixtures:load {fixture}', function ($fixture) {
-    $this->info('Loading the ' . $fixture . ' fixture.');
-    Fixtures::up($fixture);
-})->describe('Load specific fixture by name');
