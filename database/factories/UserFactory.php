@@ -17,10 +17,10 @@ $factory->define(App\User::class, function (Faker $faker) {
     static $password;
 
     return [
-        'username' => $faker->userName,
+        'username' => $faker->unique()->userName,
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
-        'apikey' => str_random(32)
+        'api_key' => str_random(32)
     ];
 });
