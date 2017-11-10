@@ -1,5 +1,6 @@
 <?php namespace App;
 
+use Illuminate\Database\Eloquent\Builder;
 use Zizaco\Entrust\EntrustRole;
 
 class Role extends EntrustRole {
@@ -190,6 +191,16 @@ class Role extends EntrustRole {
                 ],
             ],
         ];
+    }
+
+    public function resources() {
+        return $this->belongsToMany(Resource::class)->withPivot('value');
+    }
+
+    public function scopeWithResource(Builder $query, $name) {
+        return $query->whereHas('resources', function($query) use($name) {
+            $query->where('name', $name);
+        })->with('resources');
     }
 
     public static function defaultRole() {

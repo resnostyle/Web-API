@@ -76,6 +76,10 @@ class User extends Authenticatable
         return $this->hasMany(Invite::class);
     }
 
+    public function resources() {
+        return $this->hasMany(ResourceBucket::class)->with('resource');
+    }
+
     /**
      * Email attribute accessor
      * 
