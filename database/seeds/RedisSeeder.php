@@ -11,7 +11,7 @@ class RedisSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i <= 1000000; $i++) {
+        for ($i = 0; $i <= 10000; $i++) {
             $user = App\User::inRandomOrder()->first()->id;
             $hash = str_random();
             $key = "users.api_hits:$user:$hash";
