@@ -46,5 +46,17 @@ class AclSeeder extends Seeder
 
         $adminUser = App\User::find(1);
         $adminUser->attachRoles([$memberRole, $vipRole, $moderator, $adminRole]);
+
+        foreach (App\User::where('id', '!=', 1)->where('id', '!=', 2)->get() as $user) {
+            $choice = rand(1,7);
+
+            if ($choice >= 4) {
+                $user->attachRole($memberRole);
+            } elseif ($choice >= 2) {
+                $user->attachRole($vipRole);
+            } elseif ($choice == 1) {
+                $user->attachRole($moderator);
+            }
+        }
     }
 }
