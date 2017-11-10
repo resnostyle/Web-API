@@ -26,8 +26,6 @@ class CreateReleasesTable extends Migration
      */
     public function down()
     {
-        Schema::connection('mongodb')->table('releases', function ( $collection) {
-            $collection->drop();
-        });
+        Schema::connection('mongodb')->drop('releases');
     }
 }

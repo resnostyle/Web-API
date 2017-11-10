@@ -25,8 +25,6 @@ class CreateGroupsTable extends Migration
      */
     public function down()
     {
-        Schema::connection('mongodb')->table('groups', function ($collection) {
-            $collection->drop();
-        });
+        Schema::connection('mongodb')->drop('groups');
     }
 }
