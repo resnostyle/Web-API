@@ -18,7 +18,7 @@ class ReleaseSeeder extends Seeder
             Fixtures::up();
         }
 
-        factory(Release::class, 5000)->create()->each(function (Release $r) {
+        factory(Release::class, 1000)->create()->each(function (Release $r) {
             $rand = random_int(3,6);
             for ($i = 0; $i < $rand; $i++) {
                 // Not a quick way to get a random mongo record, i would not use this in production.
