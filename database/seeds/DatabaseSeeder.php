@@ -14,6 +14,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(GroupSeeder::class);
         $this->call(ReleaseSeeder::class);
+        $this->call(UserSeeder::class);
         $this->call(AclSeeder::class);
+        $this->call(RedisSeeder::class);
     }
 }
