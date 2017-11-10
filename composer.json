@@ -44,6 +44,7 @@
     "doctrine/dbal": "^2.6",
     "filp/whoops": "~2.0",
     "fzaninotto/faker": "~1.4",
+    "itsgoingd/clockwork": "^2.0",
     "laracasts/behat-laravel-extension": "^1.0",
     "mockery/mockery": "0.9.*",
     "phpunit/phpunit": "~6.0",
