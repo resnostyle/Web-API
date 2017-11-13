@@ -9,7 +9,7 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
-    "devDependencies": {
+    "dependencies": {
         "axios": "^0.16.2",
         "bootstrap": "^4.0.0-beta",
         "cross-env": "^5.0.1",
@@ -20,7 +20,7 @@
         "popper.js": "^1.12.5",
         "vue": "^2.1.10"
     },
-    "dependencies": {
+    "devDependencies": {
         "browser-sync": "^2.18.13",
         "browser-sync-webpack-plugin": "^1.2.0"
     }
