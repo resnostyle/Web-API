@@ -13,9 +13,11 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
+use Illuminate\Support\Facades\Redis;
 
 /**
  * User Model
@@ -76,8 +78,27 @@ class User extends Authenticatable
         return $this->hasMany(Invite::class);
     }
 
-    public function resources() {
-        return $this->hasMany(ResourceBucket::class)->with('resource');
+    public function resourceLimits() {
+        $roles = $this->roles()->with('resources')->get();
+        $raw_resources = [];
+
+        foreach($roles as $r) {
+            $raw_resources[] = $r->resources;
+        }
+
+        $resources = collect($raw_resources)->collapse();
+
+        return $resources->mapWithKeys(function ($item) {
+            return [$item->name => $item->pivot->value];
+        });
+    }
+
+    public function resourceUsage($resource_name, $countOnly = true) {
+        $key = sprintf('users.%s:%d:*', $resource_name, $this->id);
+
+        $keys = Redis::keys($key);
+
+        return ($countOnly) ? count($keys) : $keys;
     }
 
     /**
@@ -109,5 +130,11 @@ class User extends Authenticatable
      */
     public function setEmailAttribute($email) {
         $this->attributes['email'] = encrypt($email);
+    }
+
+    public function getResource(Resource $res) {
+        $key = sprintf('users.%s:%d', $res->name, $this->id);
+
+        return Redis::keys($key);
     }
 }

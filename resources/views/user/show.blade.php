@@ -17,6 +17,16 @@
                 @endforeach
             </ul>
         </li>
+        <li>Resources:
+            <ul>
+                @foreach($user->resourceLimits() as $name => $val)
+                    <li>
+                        <strong>{{$name}}: </strong>
+                        {{ $user->resourceUsage($name) }}/{{$val}}
+                    </li>
+                    @endforeach
+            </ul>
+        </li>
     </ul>
 
 @endsection
